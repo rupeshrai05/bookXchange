@@ -11,14 +11,5 @@
             "src": "/(.*)",
             "dest": "/api/index.js"
         }
-    ],
-    "env": {
-        "MONGO_URI": "@mongo_uri",
-        "JWT_SECRET": "@jwt_secret",
-        "CLOUDINARY_CLOUD_NAME": "@cloudinary_cloud_name",
-        "CLOUDINARY_API_KEY": "@cloudinary_api_key",
-        "CLOUDINARY_API_SECRET": "@cloudinary_api_secret",
-        "EMAIL_USER": "@email_user",
-        "EMAIL_PASS": "@email_pass"
-    }
+    ]
 }
