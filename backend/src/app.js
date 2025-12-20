@@ -25,6 +25,11 @@ app.use(express.json());
 // Serve static uploads for local dev
 app.use("/uploads", express.static("uploads"));
 
+// Health check route
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
 app.use("/api/auth", authRoutes);
 
 app.use("/api/users", userRoutes);
