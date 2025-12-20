@@ -15,8 +15,9 @@ const adminRoutes = require("./modules/admin/admin.routes");
 const reportRoutes = require("./modules/report/report.routes");
 
 const app = express();
+const corsOrigins = (process.env.CLIENT_URL || "*").split(",").map(url => url.trim());
 app.use(cors({
-  origin: process.env.CLIENT_URL || "*",
+  origin: corsOrigins,
   credentials: true
 }));
 app.use(express.json());
